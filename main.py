@@ -12,7 +12,7 @@ from summarizers import Summarizers
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 # Setting the API key
-openai_api_key = "sk-proj-P2EeIU8PX7kMm0b98wCT7NRr5Y_PMANqpoDehB4MELoxEnEWQnuP00fz3xmJZapdpLrn_P0mIGT3BlbkFJHY9gzdkYdYcDfclVsCJJqVrMm4hKk6XczPwSJSPKkbUJc9RErMmLX619uHDYDeLiHZUsSqysIAaiml"
+openai_api_key = ""
 os.environ['OPENAI_API_KEY'] = openai_api_key
 
 # Create a python pipeline to get the transcript text from a audio file
@@ -152,4 +152,5 @@ def summarize_text_gemini_flash(text: str, max_words: int = 250) -> str:
         else:
             return "Error: No summary generated or unexpected response structure."
     except Exception as e:
+
         return f"An error occurred during summarization: {e}"
